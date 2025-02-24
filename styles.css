@@ -1,5 +1,5 @@
 :root{
-    --border: #4c4c6e; /* Lighter version of the background */
+    --border: #4c4c6e;
     --background: #2c2c3e;
     --text: #d1b3ff;
 }
@@ -55,4 +55,27 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.volume-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    color: var(--text);
+}
+
+#volumeSlider {
+    width: 100px;
+    margin-right: 10px;
+    accent-color: var(--text);
+}
+
+#volumeValue {
+    margin-right: 10px;
+    color: var(--text);
+}
+#volumeIcon:hover {
+    cursor: pointer;
 }
