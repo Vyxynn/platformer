@@ -37,7 +37,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border: 3px solid var(--border);
-    width: 40vw;
+    width: 60vw;
     min-height: 35vh;
     background-color: var(--background);
     box-sizing: border-box;
