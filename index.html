@@ -9,6 +9,14 @@
 <body>
     <div class="container" style="position: relative;">
         <div class="card">
+            <div class="title-bar">
+                <div class="title">Windows XP Card</div>
+                <div class="buttons">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
             <div class="cardColumn">
                 <p><span>@vyxynn</span>'s profile</p>
                 <div class="center">
@@ -17,7 +25,33 @@
                 </div>
             </div>
             <div class="cardColumn">2</div>
-            <div class="cardColumn">3</div>
+            <div class="cardColumn">
+                <div id="linkedSocials">
+                    <a href="https://www.youtube.com/@vyxynn" target="_blank" title="YouTube">
+                        <img src="./assets/youtube.png" alt="YouTube">
+                    </a>
+                    <a href="https://www.twitch.tv/vyxynnx3" target="_blank" title="Twitch">
+                        <img src="./assets/twitch.png" alt="Twitch">
+                    </a>
+                    <a href="https://discordapp.com/users/694320507645984769" target="_blank" title="Discord">
+                        <img src="./assets/discord.png" alt="Discord">
+                    </a>
+                    <a href="https://www.tiktok.com/@vyxynnx3" target="_blank" title="TikTok">
+                        <img src="./assets/tiktok.png" alt="TikTok">
+                    </a>
+                    <a href="https://bsky.app/profile/vyxynn.bsky.social" target="_blank" title="BlueSky">
+                        <img src="./assets/bluesky.png" alt="BlueSky">
+                    </a>
+                    <a href="https://github.com/Vyxynn" target="_blank" title="GitHub">
+                        <img src="./assets/github.png" alt="GitHub">
+                    </a>
+                </div>
+
+                <div id="latestPost">
+                    <p>Latest Post</p>
+                    <div id="postContent"></div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="volume-container">
@@ -25,6 +59,7 @@
         <span id="volumeValue">50</span>
         <img id="volumeIcon" src="./assets/volume1.png" alt="volume" width="20" height="20">
     </div>
-    <script src="script.js"></script>
+    <script src="volume.js"></script>
+    <script src="getPost.js"></script>
 </body>
 </html>

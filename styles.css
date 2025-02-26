@@ -1,16 +1,18 @@
-:root{
+:root {
     --border: #4c4c6e;
     --background: #2c2c3e;
     --text: #d1b3ff;
+    --dark-purple: #4b0082;
+    --black: #000000;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: black;
     margin: 0;
     height: 100vh;
@@ -20,7 +22,7 @@ body{
     background-image: url('./assets/city.gif');
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +30,7 @@ body{
     height: 100%;
 }
 
-.card{
+.card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border: 3px solid var(--border);
@@ -39,18 +41,18 @@ body{
     color: var(--text);
 }
 
-.cardColumn{
+.cardColumn {
     display: flex;
     flex-direction: column;
     padding: 5px;
 }
 
-.cardColumn img{
+.cardColumn img {
     width: 100%;
     height: auto;
 }
 
-.center{
+.center {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,6 +78,55 @@ body{
     margin-right: 10px;
     color: var(--text);
 }
+
 #volumeIcon:hover {
     cursor: pointer;
+}
+
+.title-bar {
+    background: linear-gradient(to bottom, var(--dark-purple), var(--black));
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 2px solid var(--dark-purple);
+    grid-column: span 3;
+}
+
+.title-bar .title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.title-bar .buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.title-bar .buttons div {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border: 1px solid var(--dark-purple);
+    border-radius: 2px;
+}
+
+#linkedSocials {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+#linkedSocials a {
+    display: inline-block;
+}
+
+#linkedSocials img {
+    width: 30px;
+    height: 30px;
 }
