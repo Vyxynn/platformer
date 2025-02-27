@@ -133,3 +133,74 @@ body {
     width: 30px;
     height: 30px;
 }
+
+#latestPost {
+    min-width: 300px;
+}
+
+@media (max-width: 1200px) {
+    .card {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        grid-template-columns: 1fr;
+        width: 90vw;
+    }
+
+    .cardColumn {
+        padding: 10px;
+    }
+
+    .title-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .title-bar .buttons {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    .cardColumn {
+        width: 100%;
+    }
+
+    .title-bar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 95vw;
+    }
+
+    .volume-container {
+        bottom: 5px;
+        right: 5px;
+    }
+
+    #volumeSlider {
+        width: 80px;
+    }
+
+    #volumeIcon {
+        width: 15px;
+        height: 15px;
+    }
+
+    #linkedSocials img {
+        width: 25px;
+        height: 25px;
+    }
+}

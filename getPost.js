@@ -18,7 +18,7 @@ fetch(apiUrl)
         const postUrl = `https://bsky.app/profile/${actor}/post/${postUri.split('/').pop()}`;
         console.log('Latest post URL:', postUrl);
         let html = `
-        <blockquote class="bluesky-embed" data-bluesky-uri="${postUri}" data-bluesky-cid="${postCid}">
+        <blockquote class="embed" data-bluesky-uri="${postUri}" data-bluesky-cid="${postCid}">
             <p lang="en">${latestPost.post.text}<br><br>
             <a href="${postUrl}?ref_src=embed">[image or embed]</a></p>
             &mdash; ${actor} (<a href="https://bsky.app/profile/${actor}?ref_src=embed">@${actor}</a>) 
