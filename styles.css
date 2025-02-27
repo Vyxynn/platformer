@@ -145,6 +145,7 @@ body {
 #linkedSocials img {
     width: 30px;
     height: 30px;
+    filter: invert(0.8);
 }
 
 #latestPost {
