@@ -9,23 +9,22 @@
 <body>
     <div class="container" style="position: relative;">
         <div class="card">
-            <div class="title-bar">
-                <div class="title">Windows XP Card</div>
+            <div class="title-bar"> <!--Title Bar-->
+                <div class="title"><span>@vyxynn</span>'s profile</div>
                 <div class="buttons">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div id="minimizeIcon"><img src="./assets/minimizeIcon.png" alt="Minimize" width="100%"></div>
+                    <div id="maximizeIcon"><img src="./assets/maximizeIcon.png" alt="Maximize" width="100%"></div>
+                    <div id="closeIcon"><img src="./assets/closeIcon.png" alt="Close" width="100%"></div>
                 </div>
             </div>
-            <div class="cardColumn">
-                <p><span>@vyxynn</span>'s profile</p>
+            <div class="cardColumn"> <!--Profile Image-->
                 <div class="center">
                     <img src="https://avatars.githubusercontent.com/u/108044556" alt="profile" width="100" height="100">
                     <p>Skye/Skyla | she/they/it</p>
                 </div>
             </div>
-            <div class="cardColumn">2</div>
-            <div class="cardColumn">
+            <div class="cardColumn">2</div> <!--About-->
+            <div class="cardColumn"> <!--Socials-->
                 <div id="linkedSocials">
                     <a href="https://www.youtube.com/@vyxynn" target="_blank" title="YouTube">
                         <img src="./assets/youtube.png" alt="YouTube">
@@ -54,7 +53,7 @@
             </div>
         </div>
     </div>
-    <div class="volume-container">
+    <div class="volume-container"> <!--Volume Slider on bottom right-->
         <input type="range" id="volumeSlider" min="0" max="100" value="50">
         <span id="volumeValue">50</span>
         <img id="volumeIcon" src="./assets/volume1.png" alt="volume" width="20" height="20">
