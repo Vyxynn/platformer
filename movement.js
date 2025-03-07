@@ -20,10 +20,10 @@ const startingPlayerY = window.innerHeight - player.offsetHeight; // Starting Y 
 
 // * Keybinds (Multiple keybinds allowed for each action)
 const keybinds = {
-    moveLeft: ['a', 'ArrowLeft'], // Can move left using 'a' or 'ArrowLeft'
-    moveRight: ['d', 'ArrowRight'], // Can move right using 'd' or 'ArrowRight'
-    jump: [' ', 'w', 'ArrowUp'], // Can jump using 'space', 'w' or 'ArrowUp'
-    pause: ['Escape', 'p'] // Can pause using 'Escape'
+    moveLeft: ['a', 'arrowleft'], // Can move left using 'a' or 'ArrowLeft'
+    moveRight: ['d', 'arrowright'], // Can move right using 'd' or 'ArrowRight'
+    jump: [' ', 'w', 'arrowup'], // Can jump using 'space', 'w' or 'ArrowUp'
+    pause: ['escape', 'p'] // Can pause using 'Escape' or 'p'
 };
 
 // Set the player's starting position
@@ -37,8 +37,9 @@ window.addEventListener('blur', handleWindowBlur);
 
 // * Movement functions
 function handleKeyDown(event) {
+    const key = event.key.toLowerCase();
     for (let action in keybinds) {
-        if (keybinds[action].includes(event.key)) {
+        if (keybinds[action].includes(key)) {
             keys[action] = true;
 
             if (action === 'pause') {
@@ -49,7 +50,7 @@ function handleKeyDown(event) {
 
     if (!isPaused) {
         for (let action in keybinds) {
-            if (keybinds[action].includes(event.key)) {
+            if (keybinds[action].includes(key)) {
                 keys[action] = true;
 
                 // Jumping logic
@@ -63,8 +64,9 @@ function handleKeyDown(event) {
 }
 
 function handleKeyUp(event) {
+    const key = event.key.toLowerCase();
     for (let action in keybinds) {
-        if (keybinds[action].includes(event.key)) {
+        if (keybinds[action].includes(key)) {
             keys[action] = false;
         }
     }
@@ -135,7 +137,6 @@ function movePlayer(timestamp = performance.now()) {
     player.style.top = `${newY}px`;
     playerXDisplay.textContent = `${parseInt(newX)}`;
     playerYDisplay.textContent = `${parseInt(newY)}`;
-
 
     animationFrameId = requestAnimationFrame(movePlayer); // Keep updating the player's position
 }
