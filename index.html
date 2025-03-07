@@ -32,8 +32,32 @@
         position: fixed;
         background-color: red;
     }
+
+    #fpsCounter {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+
+        #playerCoordinates {
+            position: absolute;
+            top: 40px; /* Placed below the FPS counter */
+            left: 10px;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+
     </style>
-    
 </head>
 <body>
     <div id="pauseOverlay">
@@ -41,10 +65,14 @@
         <h2>Press 'Escape' to unpause</h2>
     </div>
     
+    <div id="fpsCounter">FPS: 0</div>
+
+    <div id="playerCoordinates"><span id="playerXDisplay">X</span>, <span id="playerYDisplay">Y</span></div>
 
     <div id="player"></div>
 
     <!--Game JS Files-->
     <script type="module" src="movement.js" defer></script>
+    <script type="module" src="fps.js" defer></script>
 </body>
 </html>
